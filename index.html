@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NGETICH AUTO GARAGE - Premium automotive care and precision vehicle service in Kenya. Expert technicians, genuine parts, advanced diagnostics.">
+  <title>NGETICH AUTO GARAGE | Premium Auto Care</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --charcoal: #1a1a1a;
+      --matte-black: #0d0d0d;
+      --silver: #c0c0c0;
+      --accent-red: #c41e3a;
+      --light-gray: #f5f5f5;
+    }
+    
+    * {
+      scroll-behavior: smooth;
+    }
+    
+    .font-display {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    .font-body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(13, 13, 13, 0.95) 0%, rgba(26, 26, 26, 0.85) 50%, rgba(13, 13, 13, 0.9) 100%);
+    }
+    
+    .hero-pattern {
+      background-image: 
+        radial-gradient(ellipse at 20% 80%, rgba(196, 30, 58, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(192, 192, 192, 0.05) 0%, transparent 50%),
+        linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%);
+    }
+    
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(196, 30, 58, 0.25);
+    }
+    
+    .nav-blur {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 0%, #c0c0c0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .accent-line {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #c41e3a 0%, #8b0000 100%);
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(13, 13, 13, 0.8) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+    
+    .gallery-item:hover .gallery-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .gallery-text {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+    
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      animation: pulse-glow 2s infinite;
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      50% { box-shadow: 0 0 20px 10px rgba(37, 211, 102, 0.2); }
+    }
+    
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in-up {
+      animation: fade-in-up 0.8s ease-out forwards;
+    }
+    
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+    
+    .brand-logo {
+      filter: grayscale(100%) brightness(200%);
+      opacity: 0.6;
+      transition: all 0.3s ease;
+    }
+    
+    .brand-logo:hover {
+      filter: grayscale(0%) brightness(100%);
+      opacity: 1;
+    }
+    
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #c41e3a;
+      box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.2);
+    }
+    
+    .service-icon {
+      width: 48px;
+      height: 48px;
+    }
+    
+    .testimonial-card {
+      background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+      border: 1px solid rgba(192, 192, 192, 0.1);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-body bg-[#0d0d0d] text-white overflow-x-hidden">
+  <div id="app-wrapper" class="w-full h-full overflow-auto"><!-- Navigation -->
+   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-blur bg-[#0d0d0d]/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex items-center justify-between h-20"><!-- Logo -->
+      <div class="flex items-center space-x-3">
+       <div class="w-12 h-12 bg-gradient-to-br from-[#c41e3a] to-[#8b0000] rounded-lg flex items-center justify-center">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+        </svg>
+       </div>
+       <div><span class="font-display text-xl font-bold tracking-wide">NGETICH</span> <span class="block text-xs text-[#c0c0c0] tracking-[0.3em] uppercase">Auto Garage</span>
+       </div>
+      </div><!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8"><a href="#home" class="text-sm font-medium text-[#c0c0c0] hover:text-white transition-colors">Home</a> <a href="#about" class="text-sm font-medium text-[#c0c0c0] hover:text-white transition-colors">About</a> <a href="#services" class="text-sm font-medium text-[#c0c0c0] hover:text-white transition-colors">Services</a> <a href="#gallery" class="text-sm font-medium text-[#c0c0c0] hover:text-white transition-colors">Gallery</a> <a href="#contact" class="text-sm font-medium text-[#c0c0c0] hover:text-white transition-colors">Contact</a> <a href="#contact" class="px-6 py-2.5 bg-gradient-to-r from-[#c41e3a] to-[#8b0000] text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-[#c41e3a]/30 transition-all"> Book Service </a>
+      </div><!-- Mobile Menu Button --> <button id="mobile-menu-btn" class="md:hidden p-2 text-[#c0c0c0] hover:text-white">
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+       </svg></button>
+     </div>
+    </div><!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#1a1a1a] border-t border-[#333]">
+     <div class="px-4 py-4 space-y-3"><a href="#home" class="block py-2 text-[#c0c0c0] hover:text-white">Home</a> <a href="#about" class="block py-2 text-[#c0c0c0] hover:text-white">About</a> <a href="#services" class="block py-2 text-[#c0c0c0] hover:text-white">Services</a> <a href="#gallery" class="block py-2 text-[#c0c0c0] hover:text-white">Gallery</a> <a href="#contact" class="block py-2 text-[#c0c0c0] hover:text-white">Contact</a> <a href="#contact" class="block w-full text-center px-6 py-3 bg-gradient-to-r from-[#c41e3a] to-[#8b0000] text-white font-semibold rounded-lg"> Book Service </a>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="home" class="relative min-h-screen flex items-center hero-gradient hero-pattern"><!-- Decorative Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+     <div class="absolute top-20 left-10 w-72 h-72 bg-[#c41e3a]/5 rounded-full blur-3xl"></div>
+     <div class="absolute bottom-20 right-10 w-96 h-96 bg-[#c0c0c0]/5 rounded-full blur-3xl"></div><!-- Grid Pattern -->
+     <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(#c0c0c0 1px, transparent 1px), linear-gradient(90deg, #c0c0c0 1px, transparent 1px); background-size: 50px 50px;"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+     <div class="grid lg:grid-cols-2 gap-12 items-center"><!-- Hero Content -->
+      <div class="animate-fade-in-up">
+       <div class="inline-flex items-center space-x-2 px-4 py-2 bg-[#1a1a1a]/80 rounded-full border border-[#333] mb-6"><span class="w-2 h-2 bg-[#c41e3a] rounded-full animate-pulse"></span> <span class="text-xs text-[#c0c0c0] uppercase tracking-widest">Premium Auto Care Since 2010</span>
+       </div>
+       <h1 id="hero-headline" class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"><span class="gradient-text">Precision Auto Care.</span> <br><span class="text-white">Premium Performance.</span></h1>
+       <p id="hero-subtext" class="text-lg sm:text-xl text-[#c0c0c0] mb-8 max-w-xl leading-relaxed">Where expertise meets excellence in vehicle service and repair. Experience world-class automotive care for discerning vehicle owners.</p>
+       <div class="flex flex-col sm:flex-row gap-4 mb-12"><a href="#contact" class="group px-8 py-4 bg-gradient-to-r from-[#c41e3a] to-[#8b0000] text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-[#c41e3a]/40 transition-all flex items-center justify-center space-x-2"> <span>Schedule Service</span>
+         <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+         </svg></a> <a href="tel:+254700000000" id="hero-phone-btn" class="px-8 py-4 bg-transparent border-2 border-[#c0c0c0]/30 text-white font-semibold rounded-lg hover:border-[#c41e3a] hover:bg-[#c41e3a]/10 transition-all flex items-center justify-center space-x-2">
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+         </svg><span>Speak to a Specialist</span> </a>
+       </div><!-- Trust Indicators -->
+       <div class="flex flex-wrap gap-6 text-sm text-[#c0c0c0]">
+        <div class="flex items-center space-x-2">
+         <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+         </svg><span>Certified Technicians</span>
+        </div>
+        <div class="flex items-center space-x-2">
+         <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+         </svg><span>Genuine Parts</span>
+        </div>
+        <div class="flex items-center space-x-2">
+         <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+         </svg><span>Advanced Diagnostics</span>
+        </div>
+       </div>
+      </div><!-- Hero Visual -->
+      <div class="hidden lg:block relative animate-fade-in-up delay-200">
+       <div class="relative"><!-- Main Card -->
+        <div class="bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] rounded-2xl p-8 border border-[#333] shadow-2xl">
+         <div class="aspect-video bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-xl flex items-center justify-center relative overflow-hidden"><!-- Car SVG -->
+          <svg class="w-64 h-40 text-[#c0c0c0]" viewbox="0 0 200 100" fill="currentColor"><ellipse cx="45" cy="75" rx="18" ry="18" fill="#333" /> <ellipse cx="45" cy="75" rx="10" ry="10" fill="#c41e3a" /> <ellipse cx="155" cy="75" rx="18" ry="18" fill="#333" /> <ellipse cx="155" cy="75" rx="10" ry="10" fill="#c41e3a" /> <path d="M20 60 Q30 30 70 30 L130 30 Q170 30 175 60 L180 70 Q180 80 170 80 L30 80 Q20 80 20 70 Z" fill="#1a1a1a" stroke="#c0c0c0" stroke-width="1" /> <path d="M50 30 Q55 15 80 15 L120 15 Q145 15 150 30" fill="none" stroke="#c0c0c0" stroke-width="1" /> <rect x="55" y="35" width="35" height="20" rx="3" fill="#2a2a2a" stroke="#444" /> <rect x="110" y="35" width="35" height="20" rx="3" fill="#2a2a2a" stroke="#444" /> <circle cx="175" cy="45" r="4" fill="#c41e3a" /> <circle cx="25" cy="45" r="4" fill="#fff" />
+          </svg><!-- Decorative Lines -->
+          <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(45deg, transparent 45%, #c0c0c0 45%, #c0c0c0 55%, transparent 55%); background-size: 20px 20px;"></div>
+         </div><!-- Stats -->
+         <div class="grid grid-cols-3 gap-4 mt-6">
+          <div class="text-center p-4 bg-[#0d0d0d] rounded-lg">
+           <div class="text-2xl font-bold text-[#c41e3a]">
+            14+
+           </div>
+           <div class="text-xs text-[#c0c0c0] uppercase tracking-wide">
+            Years Experience
+           </div>
+          </div>
+          <div class="text-center p-4 bg-[#0d0d0d] rounded-lg">
+           <div class="text-2xl font-bold text-[#c41e3a]">
+            5000+
+           </div>
+           <div class="text-xs text-[#c0c0c0] uppercase tracking-wide">
+            Vehicles Serviced
+           </div>
+          </div>
+          <div class="text-center p-4 bg-[#0d0d0d] rounded-lg">
+           <div class="text-2xl font-bold text-[#c41e3a]">
+            100%
+           </div>
+           <div class="text-xs text-[#c0c0c0] uppercase tracking-wide">
+            Satisfaction
+           </div>
+          </div>
+         </div>
+        </div><!-- Floating Badge -->
+        <div class="absolute -top-4 -right-4 bg-gradient-to-r from-[#c41e3a] to-[#8b0000] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+         ⭐ Rated #1 in Nairobi
+        </div>
+       </div>
+      </div>
+     </div>
+    </div><!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+     <svg class="w-6 h-6 text-[#c0c0c0]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+     </svg>
+    </div>
+   </section><!-- Brand Logos -->
+   <section class="py-12 bg-[#0d0d0d] border-y border-[#1a1a1a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <p class="text-center text-sm text-[#666] uppercase tracking-widest mb-8">Trusted by owners of premium brands</p>
+     <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16"><!-- Brand Logos as Text --> <span class="brand-logo text-2xl font-bold text-[#c0c0c0]">Mercedes-Benz</span> <span class="brand-logo text-2xl font-bold text-[#c0c0c0]">BMW</span> <span class="brand-logo text-2xl font-bold text-[#c0c0c0]">Toyota</span> <span class="brand-logo text-2xl font-bold text-[#c0c0c0]">Nissan</span> <span class="brand-logo text-2xl font-bold text-[#c0c0c0]">Audi</span> <span class="brand-logo text-2xl font-bold text-[#c0c0c0]">Land Rover</span>
+     </div>
+    </div>
+   </section><!-- About Section -->
+   <section id="about" class="py-24 bg-[#1a1a1a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid lg:grid-cols-2 gap-16 items-center"><!-- About Content -->
+      <div>
+       <div class="accent-line mb-6"></div>
+       <h2 id="about-title" class="font-display text-3xl sm:text-4xl font-bold mb-6">About <span class="text-[#c41e3a]">NGETICH</span> Auto Garage</h2>
+       <p class="text-[#c0c0c0] text-lg leading-relaxed mb-6">Founded on principles of excellence and precision, NGETICH Auto Garage has been the trusted choice for discerning vehicle owners in Kenya for over 14 years. Our state-of-the-art facility combines European-standard equipment with African hospitality.</p>
+       <p class="text-[#c0c0c0] leading-relaxed mb-8">Every vehicle that enters our garage receives the attention it deserves. Our team of certified master technicians brings decades of combined experience, treating each car as if it were their own. From routine maintenance to complex diagnostics, we deliver nothing short of perfection.</p><!-- Mission Statement -->
+       <div class="bg-[#0d0d0d] rounded-xl p-6 border-l-4 border-[#c41e3a]">
+        <p class="text-sm uppercase tracking-widest text-[#c41e3a] mb-2">Our Mission</p>
+        <p class="text-white italic">"Delivering world-class automotive care with uncompromising quality, integrity, and attention to detail."</p>
+       </div>
+      </div><!-- About Visual -->
+      <div class="grid grid-cols-2 gap-4">
+       <div class="space-y-4">
+        <div class="bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-xl p-6 h-48 flex flex-col justify-end border border-[#333]">
+         <svg class="w-10 h-10 text-[#c41e3a] mb-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+         </svg>
+         <h3 class="font-semibold text-white">Integrity</h3>
+         <p class="text-sm text-[#c0c0c0]">Honest assessments, fair pricing</p>
+        </div>
+        <div class="bg-gradient-to-br from-[#c41e3a]/20 to-[#1a1a1a] rounded-xl p-6 h-64 flex flex-col justify-end border border-[#c41e3a]/30">
+         <svg class="w-10 h-10 text-[#c41e3a] mb-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+         </svg>
+         <h3 class="font-semibold text-white">Expertise</h3>
+         <p class="text-sm text-[#c0c0c0]">Master certified technicians</p>
+        </div>
+       </div>
+       <div class="space-y-4 pt-8">
+        <div class="bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-xl p-6 h-64 flex flex-col justify-end border border-[#333]">
+         <svg class="w-10 h-10 text-[#c41e3a] mb-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+         </svg>
+         <h3 class="font-semibold text-white">Modern Equipment</h3>
+         <p class="text-sm text-[#c0c0c0]">State-of-the-art diagnostics</p>
+        </div>
+        <div class="bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-xl p-6 h-48 flex flex-col justify-end border border-[#333]">
+         <svg class="w-10 h-10 text-[#c41e3a] mb-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+         </svg>
+         <h3 class="font-semibold text-white">Care</h3>
+         <p class="text-sm text-[#c0c0c0]">We treat your car like ours</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Services Section -->
+   <section id="services" class="py-24 bg-[#0d0d0d]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16">
+      <div class="accent-line mx-auto mb-6"></div>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Our <span class="text-[#c41e3a]">Premium</span> Services</h2>
+      <p class="text-[#c0c0c0] max-w-2xl mx-auto">Comprehensive automotive solutions delivered with precision and care. Every service backed by our quality guarantee.</p>
+     </div><!-- Services Grid -->
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Service Card 1 -->
+      <div class="card-hover bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] rounded-xl p-8 border border-[#333] group">
+       <div class="w-14 h-14 bg-[#c41e3a]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#c41e3a]/20 transition-colors">
+        <svg class="w-7 h-7 text-[#c41e3a]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+        </svg>
+       </div>
+       <h3 class="font-semibold text-xl mb-3">Advanced Diagnostics</h3>
+       <p class="text-[#c0c0c0] text-sm leading-relaxed">Computer-assisted diagnostic systems to identify issues with pinpoint accuracy. Full system health reports included.</p>
+      </div><!-- Service Card 2 -->
+      <div class="card-hover bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] rounded-xl p-8 border border-[#333] group">
+       <div class="w-14 h-14 bg-[#c41e3a]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#c41e3a]/20 transition-colors">
+        <svg class="w-7 h-7 text-[#c41e3a]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+       </div>
+       <h3 class="font-semibold text-xl mb-3">Engine Performance</h3>
+       <p class="text-[#c0c0c0] text-sm leading-relaxed">Expert engine repairs, rebuilds, and performance tuning. Restore your vehicle's power and efficiency.</p>
+      </div><!-- Service Card 3 -->
+      <div class="card-hover bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] rounded-xl p-8 border border-[#333] group">
+       <div class="w-14 h-14 bg-[#c41e3a]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#c41e3a]/20 transition-colors">
+        <svg class="w-7 h-7 text-[#c41e3a]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        </svg>
+       </div>
+       <h3 class="font-semibold text-xl mb-3">Oil &amp; Fluid Services</h3>
+       <p class="text-[#c0c0c0] text-sm leading-relaxed">Premium synthetic oils and manufacturer-grade fluids. Complete flush and fill services available.</p>
+      </div><!-- Service Card 4 -->
+      <div class="card-hover bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] rounded-xl p-8 border border-[#333] group">
+       <div class="w-14 h-14 bg-[#c41e3a]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#c41e3a]/20 transition-colors">
+        <svg class="w-7 h-7 text-[#c41e3a]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+       </div>
+       <h3 class="font-semibold text-xl mb-3">Brake &amp; Suspension</h3>
+       <p class="text-[#c0c0c0] text-sm leading-relaxed">Complete brake system service and suspension work. Safety inspections and performance upgrades.</p>
+      </div><!-- Service Card 5 -->
+      <div class="card-hover bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] rounded-xl p-8 border border-[#333] group">
+       <div class="w-14 h-14 bg-[#c41e3a]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#c41e3a]/20 transition-colors">
+        <svg class="w-7 h-7 text-[#c41e3a]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>
+       </div>
+       <h3 class="font-semibold text-xl mb-3">Electrical Systems</h3>
+       <p class="text-[#c0c0c0] text-sm leading-relaxed">Computer diagnostics, wiring repairs, and electrical component replacement. Battery services included.</p>
+      </div><!-- Service Card 6 -->
+      <div class="card-hover bg-gradient-to-br from-[#1a1a1a] to-[#0d0d0d] rounded-xl p-8 border border-[#333] group">
+       <div class="w-14 h-14 bg-[#c41e3a]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#c41e3a]/20 transition-colors">
+        <svg class="w-7 h-7 text-[#c41e3a]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+       </div>
+       <h3 class="font-semibold text-xl mb-3">Wheel Alignment</h3>
+       <p class="text-[#c0c0c0] text-sm leading-relaxed">Precision wheel alignment and balancing. Extend tire life and improve handling performance.</p>
+      </div><!-- Service Card 7 -->
+      <div class="card-hover bg-gradient-to-br from-[#c41e3a]/20 to-[#1a1a1a] rounded-xl p-8 border border-[#c41e3a]/30 group lg:col-span-3 md:col-span-2">
+       <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+        <div class="flex items-start space-x-6 mb-4 md:mb-0">
+         <div class="w-14 h-14 bg-[#c41e3a]/20 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-7 h-7 text-[#c41e3a]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+          </svg>
+         </div>
+         <div>
+          <h3 class="font-semibold text-xl mb-2">Professional Detailing &amp; Car Care</h3>
+          <p class="text-[#c0c0c0] text-sm leading-relaxed max-w-xl">Interior deep cleaning, exterior polish, ceramic coating, and paint protection. Your vehicle will look showroom-new.</p>
+         </div>
+        </div><a href="#contact" class="inline-flex items-center space-x-2 px-6 py-3 bg-[#c41e3a] text-white font-semibold rounded-lg hover:bg-[#a01830] transition-colors"> <span>Book Detailing</span>
+         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+         </svg></a>
+       </div>
+      </div>
+     </div><!-- Service Guarantee -->
+     <div class="mt-12 text-center">
+      <div class="inline-flex items-center space-x-3 px-6 py-3 bg-[#1a1a1a] rounded-full border border-[#333]">
+       <svg class="w-6 h-6 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+       </svg><span class="text-white font-semibold">90-Day Service Guarantee</span> <span class="text-[#c0c0c0]">on all repairs</span>
+      </div>
+     </div>
+    </div>
+   </section><!-- Gallery Section -->
+   <section id="gallery" class="py-24 bg-[#1a1a1a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16">
+      <div class="accent-line mx-auto mb-6"></div>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Our <span class="text-[#c41e3a]">Workshop</span></h2>
+      <p class="text-[#c0c0c0] max-w-2xl mx-auto">Take a glimpse inside our state-of-the-art facility where precision meets excellence.</p>
+     </div><!-- Gallery Grid -->
+     <div class="grid grid-cols-2 md:grid-cols-3 gap-4"><!-- Gallery Item 1 -->
+      <div class="gallery-item rounded-xl bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] aspect-square relative cursor-pointer overflow-hidden"><img src="https://images.pexels.com/photos/5632408/pexels-photo-5632408.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Mechanic working on engine" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed to load:', this.src); this.style.background='#2a2a2a'; this.alt='Engine work image unavailable';">
+       <div class="gallery-text absolute bottom-4 left-4 right-4 z-10">
+        <h4 class="font-semibold text-white">Engine Service</h4>
+        <p class="text-sm text-[#c0c0c0]">Expert mechanical repairs</p>
+       </div>
+      </div><!-- Gallery Item 2 -->
+      <div class="gallery-item rounded-xl bg-gradient-to-br from-[#c41e3a]/30 to-[#1a1a1a] aspect-square relative cursor-pointer overflow-hidden md:row-span-2 md:aspect-auto"><img src="https://images.pexels.com/photos/5632384/pexels-photo-5632384.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Mechanic with tools in garage" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed to load:', this.src); this.style.background='#c41e3a'; this.alt='Garage work image unavailable';">
+       <div class="gallery-text absolute bottom-4 left-4 right-4 z-10">
+        <h4 class="font-semibold text-white">Professional Workshop</h4>
+        <p class="text-sm text-[#c0c0c0]">State-of-the-art facility</p>
+       </div>
+      </div><!-- Gallery Item 3 -->
+      <div class="gallery-item rounded-xl bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] aspect-square relative cursor-pointer overflow-hidden"><img src="https://images.pexels.com/photos/5632413/pexels-photo-5632413.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Automotive technician with wrench" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed to load:', this.src); this.style.background='#2a2a2a'; this.alt='Technician image unavailable';">
+       <div class="gallery-text absolute bottom-4 left-4 right-4 z-10">
+        <h4 class="font-semibold text-white">Expert Technicians</h4>
+        <p class="text-sm text-[#c0c0c0]">Certified &amp; experienced</p>
+       </div>
+      </div><!-- Gallery Item 4 -->
+      <div class="gallery-item rounded-xl bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] aspect-square relative cursor-pointer overflow-hidden"><img src="https://images.pexels.com/photos/5632421/pexels-photo-5632421.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Vehicle tire maintenance" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed to load:', this.src); this.style.background='#2a2a2a'; this.alt='Tire service image unavailable';">
+       <div class="gallery-text absolute bottom-4 left-4 right-4 z-10">
+        <h4 class="font-semibold text-white">Tire Service</h4>
+        <p class="text-sm text-[#c0c0c0]">Maintenance &amp; replacement</p>
+       </div>
+      </div><!-- Gallery Item 5 -->
+      <div class="gallery-item rounded-xl bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] aspect-square relative cursor-pointer overflow-hidden col-span-2 md:col-span-1 md:aspect-square"><img src="https://images.pexels.com/photos/5632406/pexels-photo-5632406.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Mechanic under vehicle" loading="lazy" class="w-full h-full object-cover" onerror="console.error('Image failed to load:', this.src); this.style.background='#2a2a2a'; this.alt='Undercarriage work image unavailable';">
+       <div class="gallery-text absolute bottom-4 left-4 right-4 z-10">
+        <h4 class="font-semibold text-white">Undercarriage Work</h4>
+        <p class="text-sm text-[#c0c0c0]">Suspension &amp; brake service</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Testimonials Section -->
+   <section class="py-24 bg-[#0d0d0d]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center mb-16">
+      <div class="accent-line mx-auto mb-6"></div>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Client <span class="text-[#c41e3a]">Testimonials</span></h2>
+      <p class="text-[#c0c0c0] max-w-2xl mx-auto">Hear from executives and professionals who trust NGETICH Auto Garage with their vehicles.</p>
+     </div><!-- Testimonials Grid -->
+     <div class="grid md:grid-cols-3 gap-6"><!-- Testimonial 1 -->
+      <div class="testimonial-card rounded-xl p-8">
+       <div class="flex items-center space-x-1 mb-4">
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+       </div>
+       <p class="text-[#c0c0c0] italic mb-6 leading-relaxed">"NGETICH Auto Garage handles my entire fleet of 12 vehicles. Their professionalism and attention to detail is unmatched. I've reduced my fleet downtime by 40% since switching to them."</p>
+       <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-gradient-to-br from-[#c41e3a] to-[#8b0000] rounded-full flex items-center justify-center text-white font-bold">
+         JK
+        </div>
+        <div>
+         <p class="font-semibold text-white">James Kariuki</p>
+         <p class="text-sm text-[#c0c0c0]">CEO, Logistics Solutions Ltd</p>
+        </div>
+       </div>
+      </div><!-- Testimonial 2 -->
+      <div class="testimonial-card rounded-xl p-8">
+       <div class="flex items-center space-x-1 mb-4">
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+       </div>
+       <p class="text-[#c0c0c0] italic mb-6 leading-relaxed">"My Mercedes has never performed better. The team diagnosed an issue three other garages missed. Their expertise with European vehicles is exceptional. Highly recommend."</p>
+       <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-gradient-to-br from-[#c0c0c0] to-[#808080] rounded-full flex items-center justify-center text-[#1a1a1a] font-bold">
+         AM
+        </div>
+        <div>
+         <p class="font-semibold text-white">Dr. Amina Mwangi</p>
+         <p class="text-sm text-[#c0c0c0]">Medical Director</p>
+        </div>
+       </div>
+      </div><!-- Testimonial 3 -->
+      <div class="testimonial-card rounded-xl p-8">
+       <div class="flex items-center space-x-1 mb-4">
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+        <svg class="w-5 h-5 text-[#c41e3a]" fill="currentColor" viewbox="0 0 20 20">
+         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+       </div>
+       <p class="text-[#c0c0c0] italic mb-6 leading-relaxed">"Finally found a garage that treats customers with respect and transparency. No surprise charges, clear communication, and my Land Rover runs like new. This is how service should be."</p>
+       <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-gradient-to-br from-[#c41e3a] to-[#8b0000] rounded-full flex items-center justify-center text-white font-bold">
+         PO
+        </div>
+        <div>
+         <p class="font-semibold text-white">Peter Ochieng</p>
+         <p class="text-sm text-[#c0c0c0]">Business Consultant</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="py-24 bg-[#1a1a1a]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid lg:grid-cols-2 gap-16"><!-- Contact Info -->
+      <div>
+       <div class="accent-line mb-6"></div>
+       <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">Get in <span class="text-[#c41e3a]">Touch</span></h2>
+       <p class="text-[#c0c0c0] text-lg mb-8 leading-relaxed">Ready to experience premium automotive care? Schedule your service appointment or speak with our specialists today.</p><!-- Contact Details -->
+       <div class="space-y-6 mb-8">
+        <div class="flex items-start space-x-4">
+         <div class="w-12 h-12 bg-[#c41e3a]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-[#c41e3a]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+         </div>
+         <div>
+          <h4 class="font-semibold text-white mb-1">Location</h4>
+          <p id="address-display" class="text-[#c0c0c0]">Industrial Area, Enterprise Road<br>
+           Nairobi, Kenya</p>
+         </div>
+        </div>
+        <div class="flex items-start space-x-4">
+         <div class="w-12 h-12 bg-[#c41e3a]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-[#c41e3a]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+         </div>
+         <div>
+          <h4 class="font-semibold text-white mb-1">Email</h4><a href="mailto:kimutai.ngetichd@gmail.com" id="email-display" class="text-[#c0c0c0] hover:text-[#c41e3a] transition-colors">kimutai.ngetichd@gmail.com</a>
+         </div>
+        </div>
+        <div class="flex items-start space-x-4">
+         <div class="w-12 h-12 bg-[#c41e3a]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-[#c41e3a]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+         </div>
+         <div>
+          <h4 class="font-semibold text-white mb-1">Phone</h4><a href="tel:+254726119677" id="phone-display" class="text-[#c0c0c0] hover:text-[#c41e3a] transition-colors">+254 726 119 677</a>
+         </div>
+        </div>
+        <div class="flex items-start space-x-4">
+         <div class="w-12 h-12 bg-[#c41e3a]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-[#c41e3a]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+         </div>
+         <div>
+          <h4 class="font-semibold text-white mb-1">Business Hours</h4>
+          <p id="hours-display" class="text-[#c0c0c0] text-sm">Tue, Thu: 07:30 - 20:45<br>
+           Wed, Fri, Sat: 07:30 - 20:30<br>
+           Sunday &amp; Monday: Closed</p>
+         </div>
+        </div>
+       </div><!-- Quick Actions -->
+       <div class="flex flex-col sm:flex-row gap-4"><a href="tel:+254700000000" id="phone-btn" class="flex-1 px-6 py-4 bg-[#0d0d0d] border border-[#333] rounded-xl text-center hover:border-[#c41e3a] transition-colors group">
+         <svg class="w-6 h-6 text-[#c41e3a] mx-auto mb-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+         </svg><span class="font-semibold text-white">Call Now</span> </a> <a href="https://wa.me/254726119677" id="whatsapp-contact-btn" target="_blank" rel="noopener noreferrer" class="flex-1 px-6 py-4 bg-[#25D366]/10 border border-[#25D366]/30 rounded-xl text-center hover:bg-[#25D366]/20 transition-colors">
+         <svg class="w-6 h-6 text-[#25D366] mx-auto mb-2" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+         </svg><span class="font-semibold text-[#25D366]">WhatsApp</span> </a>
+       </div>
+      </div><!-- Booking Form -->
+      <div class="bg-gradient-to-br from-[#0d0d0d] to-[#1a1a1a] rounded-2xl p-8 border border-[#333]">
+       <h3 class="font-display text-2xl font-bold mb-6">Book Your Service</h3>
+       <form id="booking-form" class="space-y-5">
+        <div><label for="name" class="block text-sm font-medium text-[#c0c0c0] mb-2">Full Name</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white placeholder-[#666] transition-all" placeholder="Enter your full name">
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+         <div><label for="phone" class="block text-sm font-medium text-[#c0c0c0] mb-2">Phone Number</label> <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white placeholder-[#666] transition-all" placeholder="+254...">
+         </div>
+         <div><label for="email" class="block text-sm font-medium text-[#c0c0c0] mb-2">Email</label> <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white placeholder-[#666] transition-all" placeholder="your@email.com">
+         </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+         <div><label for="vehicle-make" class="block text-sm font-medium text-[#c0c0c0] mb-2">Vehicle Make</label> <input type="text" id="vehicle-make" name="vehicle-make" required class="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white placeholder-[#666] transition-all" placeholder="e.g., Toyota">
+         </div>
+         <div><label for="vehicle-model" class="block text-sm font-medium text-[#c0c0c0] mb-2">Vehicle Model</label> <input type="text" id="vehicle-model" name="vehicle-model" required class="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white placeholder-[#666] transition-all" placeholder="e.g., Land Cruiser">
+         </div>
+        </div>
+        <div><label for="service" class="block text-sm font-medium text-[#c0c0c0] mb-2">Service Required</label> <select id="service" name="service" required class="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white transition-all"> <option value="">Select a service</option> <option value="diagnostics">Advanced Diagnostics</option> <option value="engine">Engine Performance</option> <option value="oil">Oil &amp; Fluid Services</option> <option value="brakes">Brake &amp; Suspension</option> <option value="electrical">Electrical Systems</option> <option value="alignment">Wheel Alignment</option> <option value="detailing">Professional Detailing</option> <option value="other">Other / Multiple Services</option> </select>
+        </div>
+        <div><label for="message" class="block text-sm font-medium text-[#c0c0c0] mb-2">Additional Details</label> <textarea id="message" name="message" rows="3" class="w-full px-4 py-3 bg-[#1a1a1a] border border-[#333] rounded-lg text-white placeholder-[#666] transition-all resize-none" placeholder="Describe the issue or service needed..."></textarea>
+        </div><button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-[#c41e3a] to-[#8b0000] text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-[#c41e3a]/40 transition-all flex items-center justify-center space-x-2"> <span>Request Appointment</span>
+         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+         </svg></button>
+       </form><!-- Form Success Message -->
+       <div id="form-success" class="hidden mt-6 p-4 bg-[#25D366]/10 border border-[#25D366]/30 rounded-lg text-center">
+        <svg class="w-12 h-12 text-[#25D366] mx-auto mb-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <h4 class="font-semibold text-white mb-1">Request Submitted!</h4>
+        <p class="text-sm text-[#c0c0c0]">We'll contact you within 2 hours to confirm your appointment.</p>
+       </div>
+      </div>
+     </div><!-- Map Placeholder -->
+     <div class="mt-16 rounded-2xl overflow-hidden border border-[#333] h-64 bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] flex items-center justify-center">
+      <div class="text-center">
+       <svg class="w-16 h-16 text-[#333] mx-auto mb-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+       </svg>
+       <p class="text-[#666] font-semibold">NGETICH AUTO GARAGE</p>
+       <p class="text-[#666] text-sm mb-3">Kitengela, Kenya</p><a href="https://maps.google.com/?q=Kitengela+Kenya" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-[#c41e3a] hover:underline"> <span>Open in Google Maps</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        </svg></a>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="bg-[#0d0d0d] border-t border-[#1a1a1a] py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid md:grid-cols-4 gap-8 mb-8"><!-- Logo & About -->
+      <div class="md:col-span-2">
+       <div class="flex items-center space-x-3 mb-4">
+        <div class="w-10 h-10 bg-gradient-to-br from-[#c41e3a] to-[#8b0000] rounded-lg flex items-center justify-center">
+         <svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z" />
+         </svg>
+        </div><span class="font-display text-lg font-bold">NGETICH AUTO GARAGE</span>
+       </div>
+       <p class="text-[#c0c0c0] text-sm leading-relaxed mb-4 max-w-md">Premium automotive care for discerning vehicle owners. Over 14 years of excellence in vehicle service and repair in Nairobi, Kenya.</p>
+       <div class="flex space-x-4"><a href="#" class="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-[#c0c0c0] hover:text-[#c41e3a] hover:bg-[#1a1a1a]/80 transition-colors">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+         </svg></a> <a href="#" class="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-[#c0c0c0] hover:text-[#c41e3a] hover:bg-[#1a1a1a]/80 transition-colors">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+         </svg></a> <a href="#" class="w-10 h-10 bg-[#1a1a1a] rounded-lg flex items-center justify-center text-[#c0c0c0] hover:text-[#c41e3a] hover:bg-[#1a1a1a]/80 transition-colors">
+         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+          <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+         </svg></a>
+       </div>
+      </div><!-- Quick Links -->
+      <div>
+       <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+       <ul class="space-y-2 text-sm">
+        <li><a href="#home" class="text-[#c0c0c0] hover:text-[#c41e3a] transition-colors">Home</a></li>
+        <li><a href="#about" class="text-[#c0c0c0] hover:text-[#c41e3a] transition-colors">About Us</a></li>
+        <li><a href="#services" class="text-[#c0c0c0] hover:text-[#c41e3a] transition-colors">Services</a></li>
+        <li><a href="#gallery" class="text-[#c0c0c0] hover:text-[#c41e3a] transition-colors">Gallery</a></li>
+        <li><a href="#contact" class="text-[#c0c0c0] hover:text-[#c41e3a] transition-colors">Contact</a></li>
+       </ul>
+      </div><!-- Services -->
+      <div>
+       <h4 class="font-semibold text-white mb-4">Services</h4>
+       <ul class="space-y-2 text-sm">
+        <li><span class="text-[#c0c0c0]">Engine Diagnostics</span></li>
+        <li><span class="text-[#c0c0c0]">Brake Services</span></li>
+        <li><span class="text-[#c0c0c0]">Oil Changes</span></li>
+        <li><span class="text-[#c0c0c0]">Wheel Alignment</span></li>
+        <li><span class="text-[#c0c0c0]">Detailing</span></li>
+       </ul>
+      </div>
+     </div>
+     <div class="border-t border-[#1a1a1a] pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+       <p class="text-sm text-[#666] mb-4 md:mb-0">© 2024 NGETICH Auto Garage. All rights reserved.</p>
+       <div class="flex items-center space-x-6 text-sm text-[#666]"><span>Privacy Policy</span> <span>Terms of Service</span>
+       </div>
+      </div>
+      <div class="text-center md:text-right pt-4 border-t border-[#1a1a1a]">
+       <p class="text-sm text-[#666]">Designed by <span class="text-[#c41e3a]">Edison Hart</span></p>
+      </div>
+     </div>
+    </div>
+   </footer><!-- WhatsApp Floating Button --> <a href="https://wa.me/254726119677" id="whatsapp-float-btn" target="_blank" rel="noopener noreferrer" class="whatsapp-float w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg></a>
+  </div>
+  <script>
+    // Default configuration
+    const defaultConfig = {
+      hero_headline: 'Precision Auto Care. Premium Performance.',
+      hero_subtext: 'Where expertise meets excellence in vehicle service and repair. Experience world-class automotive care for discerning vehicle owners.',
+      about_title: 'About NGETICH Auto Garage',
+      phone_number: '+254 726 119 677',
+      whatsapp_number: '+254726119677',
+      email_address: 'kimutai.ngetichd@gmail.com',
+      address: 'Kitengela, Kenya',
+      business_hours: 'Tue, Thu: 07:30 - 20:45 | Wed, Fri, Sat: 07:30 - 20:30',
+      primary_color: '#c41e3a',
+      secondary_color: '#0d0d0d',
+      accent_color: '#c0c0c0',
+      text_color: '#ffffff',
+      surface_color: '#1a1a1a',
+      font_family: 'Playfair Display',
+      font_size: 16
+    };
+
+    // Initialize Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: async (config) => {
+          // Update hero headline
+          const heroHeadline = document.getElementById('hero-headline');
+          if (heroHeadline) {
+            const headlineText = config.hero_headline || defaultConfig.hero_headline;
+            const parts = headlineText.split('.');
+            if (parts.length >= 2) {
+              heroHeadline.innerHTML = `<span class="gradient-text">${parts[0]}.</span><br><span class="text-white">${parts.slice(1).join('.').trim()}</span>`;
+            } else {
+              heroHeadline.innerHTML = `<span class="gradient-text">${headlineText}</span>`;
+            }
+          }
+
+          // Update hero subtext
+          const heroSubtext = document.getElementById('hero-subtext');
+          if (heroSubtext) {
+            heroSubtext.textContent = config.hero_subtext || defaultConfig.hero_subtext;
+          }
+
+          // Update about title
+          const aboutTitle = document.getElementById('about-title');
+          if (aboutTitle) {
+            const title = config.about_title || defaultConfig.about_title;
+            aboutTitle.innerHTML = title.replace('NGETICH', '<span class="text-[#c41e3a]">NGETICH</span>');
+          }
+
+          // Update phone displays and links
+          const phoneNumber = config.phone_number || defaultConfig.phone_number;
+          const phoneDisplay = document.getElementById('phone-display');
+          if (phoneDisplay) {
+            phoneDisplay.textContent = phoneNumber;
+            phoneDisplay.href = `tel:${phoneNumber.replace(/\s/g, '')}`;
+          }
+
+          const phoneBtn = document.getElementById('phone-btn');
+          if (phoneBtn) {
+            phoneBtn.href = `tel:${phoneNumber.replace(/\s/g, '')}`;
+          }
+
+          const heroPhoneBtn = document.getElementById('hero-phone-btn');
+          if (heroPhoneBtn) {
+            heroPhoneBtn.href = `tel:${phoneNumber.replace(/\s/g, '')}`;
+          }
+
+          // Update WhatsApp links
+          const whatsappNumber = config.whatsapp_number || defaultConfig.whatsapp_number;
+          const whatsappClean = whatsappNumber.replace(/[\s+]/g, '');
+          
+          const whatsappFloatBtn = document.getElementById('whatsapp-float-btn');
+          if (whatsappFloatBtn) {
+            whatsappFloatBtn.href = `https://wa.me/${whatsappClean}`;
+          }
+
+          const whatsappContactBtn = document.getElementById('whatsapp-contact-btn');
+          if (whatsappContactBtn) {
+            whatsappContactBtn.href = `https://wa.me/${whatsappClean}`;
+          }
+
+          // Update email
+          const emailAddress = config.email_address || defaultConfig.email_address;
+          const emailDisplay = document.getElementById('email-display');
+          if (emailDisplay) {
+            emailDisplay.textContent = emailAddress;
+            emailDisplay.href = `mailto:${emailAddress}`;
+          }
+
+          // Update address
+          const addressDisplay = document.getElementById('address-display');
+          if (addressDisplay) {
+            const address = config.address || defaultConfig.address;
+            addressDisplay.innerHTML = address.replace(/, /g, '<br>');
+          }
+
+          // Update business hours
+          const hoursDisplay = document.getElementById('hours-display');
+          if (hoursDisplay) {
+            const hours = config.business_hours || defaultConfig.business_hours;
+            hoursDisplay.innerHTML = hours.replace(/ \| /g, '<br>');
+          }
+
+          // Apply font family
+          const fontFamily = config.font_family || defaultConfig.font_family;
+          document.querySelectorAll('.font-display').forEach(el => {
+            el.style.fontFamily = `${fontFamily}, serif`;
+          });
+
+          // Apply font size scaling
+          const baseSize = config.font_size || defaultConfig.font_size;
+          document.documentElement.style.fontSize = `${baseSize}px`;
+        },
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.secondary_color || defaultConfig.secondary_color,
+              set: (value) => {
+                config.secondary_color = value;
+                window.elementSdk.setConfig({ secondary_color: value });
+              }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => {
+                config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => config.primary_color || defaultConfig.primary_color,
+              set: (value) => {
+                config.primary_color = value;
+                window.elementSdk.setConfig({ primary_color: value });
+              }
+            },
+            {
+              get: () => config.accent_color || defaultConfig.accent_color,
+              set: (value) => {
+                config.accent_color = value;
+                window.elementSdk.setConfig({ accent_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: {
+            get: () => config.font_family || defaultConfig.font_family,
+            set: (value) => {
+              config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          },
+          fontSizeable: {
+            get: () => config.font_size || defaultConfig.font_size,
+            set: (value) => {
+              config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ['hero_headline', config.hero_headline || defaultConfig.hero_headline],
+          ['hero_subtext', config.hero_subtext || defaultConfig.hero_subtext],
+          ['about_title', config.about_title || defaultConfig.about_title],
+          ['phone_number', config.phone_number || defaultConfig.phone_number],
+          ['whatsapp_number', config.whatsapp_number || defaultConfig.whatsapp_number],
+          ['email_address', config.email_address || defaultConfig.email_address],
+          ['address', config.address || defaultConfig.address],
+          ['business_hours', config.business_hours || defaultConfig.business_hours]
+        ])
+      });
+    }
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close mobile menu when clicking a link
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    const appWrapper = document.getElementById('app-wrapper');
+    
+    if (navbar && appWrapper) {
+      appWrapper.addEventListener('scroll', () => {
+        if (appWrapper.scrollTop > 50) {
+          navbar.classList.add('bg-[#0d0d0d]/95');
+          navbar.classList.remove('bg-[#0d0d0d]/80');
+        } else {
+          navbar.classList.remove('bg-[#0d0d0d]/95');
+          navbar.classList.add('bg-[#0d0d0d]/80');
+        }
+      });
+    }
+
+    // Form submission handling
+    const bookingForm = document.getElementById('booking-form');
+    const formSuccess = document.getElementById('form-success');
+    
+    if (bookingForm && formSuccess) {
+      bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Show success message
+        bookingForm.style.display = 'none';
+        formSuccess.classList.remove('hidden');
+        
+        // Reset form after 5 seconds
+        setTimeout(() => {
+          bookingForm.reset();
+          bookingForm.style.display = 'block';
+          formSuccess.classList.add('hidden');
+        }, 5000);
+      });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target && appWrapper) {
+          const targetPosition = target.offsetTop - 80;
+          appWrapper.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c901cf816d58a40',t:'MTc3MDI3MDQ0Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
